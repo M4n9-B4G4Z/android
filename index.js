@@ -259,22 +259,14 @@ client.on('group-participants-update', async (anu) => {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				teks = `Hallo Kak @${num.split('@')[0]}\Selamat datang di group *${mdata.subject}* yang betah ya di sini dan Jgn Lupa Top Up`
+				teks = `Hallo Kak @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}* yang betah ya di sini yaa\nJANGAN LUPA TOP UP\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`
+
+`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				teks = `akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]} jasamu akan di kubur dalam²`
+				teks = `Akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]}\njasamu akan di kubur dalam²`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
