@@ -23,11 +23,11 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar affis|17*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar BagaZ|17*`
 }
 
 exports.rediregis = () => {
-	return`*「 SUDAH DAFTAR 」*\n\n*kamu sudah terdaftar di database bot*`
+	return`*「 SUDAH DAFTAR 」*\n\n*Kamu sudah terdaftar di database bot*`
 }
 
 exports.stikga = () => {
@@ -43,11 +43,11 @@ exports.groupo = () => {
 }
 
 exports.ownerb = () => {
-	return`*「OWNER BOT ONLY」*`
+	return`*「CUMA BAGAZ YG BISA」*`
 }
 
 exports.ownerg = () => {
-	return`*「OWNER GROUP ONLY」*`
+	return`*「CUMA BAGAZ YG BISA」*`
 }
 
 exports.admin = () => {
@@ -116,83 +116,12 @@ exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
 
 exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku) => { 
 	return `
-┏━━━⊱  *ABOUT USER*  ⊰━━┓
-┣⊱ *Nama* : ${pushname}
-┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
-┣⊱ *Uang mu* : Rp${uangku}
-┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp}
-┣⊱ *Level* : ${getLevelingLevel(sender)}
-┣⊱ *User register* : ${_registered.length}
-┗━━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━━┛
-
-
-┏━━⊱ *MAKER MENU* ⊰━━┓
-┣⊱ *${prefix}sticker*
-┣⊱ *${prefix}vinta*
-┣⊱ *${prefix}avengers*
-┣⊱ *${prefix}summer*
-┣⊱ *${prefix}sandwrite*
-┣⊱ *${prefix}metaldark*
-┣⊱ *${prefix}dropwater*
-┣⊱ *${prefix}greenneon*
-┣⊱ *${prefix}neontext*
-┣⊱ *${prefix}sumery*
-┣⊱ *${prefix}blood*
-┣⊱ *${prefix}firework*
-┣⊱ *${prefix}lava*
-┣⊱ *${prefix}qrcode*
-┣⊱ *${prefix}ninjalogo*
-┣⊱ *${prefix}glitch*
-┣⊱ *${prefix}wolflogo*
-┣⊱ *${prefix}lionlogo*
-┣⊱ *${prefix}jokerlogo*
-┣━━⊱  *FUN MENU*  ⊰━━━┫
-┣⊱ *${prefix}mining*
-┣⊱ *${prefix}bisakah*
-┣⊱ *${prefix}kapankah*
-┣⊱ *${prefix}apakah*
-┣⊱ *${prefix}rate*
-┣⊱ *${prefix}slap*
-┣⊱ *${prefix}tampar*
-┣⊱ *${prefix}moddroid*
-┣⊱ *${prefix}happymod*
-┣⊱ *${prefix}nangis*
-┣⊱ *${prefix}cium*
-┣⊱ *${prefix}peluk*
-┣━━⊱ *MUTUAL* ⊰━━━━━┫
-┣⊱ *${prefix}mutual*
-┣⊱ *${prefix}next*
-┣━━⊱ *MEDIA MENU* ⊰━━┫
-┣⊱ *${prefix}toxic*
-┣⊱ *${prefix}quotes*
-┣⊱ *${prefix}beritahoax*
-┣⊱ *${prefix}brainly*
-┣⊱ *${prefix}pinterest*
-┣⊱ *${prefix}resepmasakan*
-┣⊱ *${prefix}igstalk*
-┣⊱ *${prefix}bitly*
-┣━━⊱ *YT & SONG* ⊰━━━┫
-┣⊱ *${prefix}ytmp3*
-┣⊱ *${prefix}ytmp4*
-┣⊱ *${prefix}joox*
-┣━━⊱  *NSFW MENU*  ⊰━┫
-┣⊱ *${prefix}pokemon*
-┣⊱ *${prefix}anjing*
-┣⊱ *${prefix}blowjob*
-┣⊱ *${prefix}nekonime*
-┣⊱ *${prefix}kpop*
-┣⊱ *${prefix}husbu*
-┣⊱ *${prefix}shota*
-┣⊱ *${prefix}ranime*
-┣━━⊱ *LIMIT & UANG* ⊰━┫
-┣⊱ *${prefix}limit*
-┣⊱ *${prefix}buylimit*
-┣⊱ *${prefix}transfer*
-┣⊱ *${prefix}dompet*
-┣━━⊱ *GROUP MENU* ⊰━┫
-┣⊱ *${prefix}hidetag*
-┣⊱ *${prefix}grouplist*
-┣⊱ *${prefix}level*
+┏━━❉ *Abour User* ❉━━━┓
+┣⊱ *nama* : ${pushname}
+┣⊱ *nomer* : wa.me/${sender.split("@")[0]}
+┣⊱ *user register : ${_registered.length}
+┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 \━━━━━
+┏━━❉ *Group* ❉━━━━┓
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
 ┣⊱ *${prefix}setpp*
@@ -204,38 +133,18 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}promote*
 ┣⊱ *${prefix}listadmin*
 ┣⊱ *${prefix}group* [buka/tutup]
-┣⊱ *${prefix}leveling* [enable/disable]
-┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}welcome* [1/0]
-┣━━⊱ *OWNER MENU* ⊰━┫
+┣━━❉ *Owner* ❉━━
 ┣⊱ *${prefix}bc*
-┣⊱ *${prefix}bcgc*
-┣⊱ *${prefix}kickall*
-┣⊱ *${prefix}setreply*
 ┣⊱ *${prefix}setprefix*
+┣⊱ *${prefix}getses*
 ┣⊱ *${prefix}clearall*
 ┣⊱ *${prefix}block*
 ┣⊱ *${prefix}unblock*
 ┣⊱ *${prefix}leave*
-┣⊱ *${prefix}event* [1/0]
 ┣⊱ *${prefix}clone*
-┣⊱ *${prefix}setppbot*
-┣━━⊱ *THANGKS TO* ⊰━┫
-┃
-┣⊱ *AFFIS JUNIANTO*
-┣⊱ *FADHIL GRAPHY*
-┣⊱ *MHANKBARBARS*
-┣⊱ *MYBOT TEAM*
-┣⊱ *AGUNG(XPTN)*
-┣⊱ *BRYAN(SUHU)*
-┣⊱ *TOBZ*
-┣⊱ *ARUGAZ*
-┃
-┣⊱ NOTE : TQTO DI HAPUS
-┃ GW GAK UP LAGI OKE
-┃
-┗━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━┛
+┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 \━━━━━
 `
 }
 
