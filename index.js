@@ -266,7 +266,7 @@ client.on('group-participants-update', async (anu) => {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Akhirnya beban group berkurang 𝟭.\nBye bye🥳 @${num.split('@')[0]}\nJasamu akan di kubur dalam²`
+				teks = `Akhirnya beban group berkurang 𝟭.\nBye bye🥳 @${num.split('@')[0]} Jasamu akan di kubur dalam²`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
