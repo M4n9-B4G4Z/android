@@ -259,14 +259,14 @@ client.on('group-participants-update', async (anu) => {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Hallo Kak @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}* yang betah ya di sini yaa\nJANGAN LUPA TOP UP\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`
+				teks = `Hallo Kak @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}* yang betah di sini yaa✨.\nJANGAN LUPA TOP UP🔥\n*────────────────*\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`
 
 `
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]}\njasamu akan di kubur dalam²`
+				teks = `Akhirnya beban group berkurang 𝟭.\nBye bye🥳 @${num.split('@')[0]}\nJasamu akan di kubur dalam²`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -517,7 +517,7 @@ client.on('group-participants-update', async (anu) => {
 		reply('')
 		} else {
 		for (let _ of anu) {
-		sendMess(_.jid, `*「 BC GROUP 」*\n\nDari Grup : ${groupName}\nPengirim : wa.me/${(sender.split('@')[0])}\nPesan : ${body.slice(6)}`)
+		sendMess(_.jid, `*「 PROMOSI 」*\n\nDari Grup : ${groupName}\nPengirim : wa.me/${(sender.split('@')[0])}\nPesan : ${body.slice(6)}`)
 		}
 		reply('Sukses broadcast group')
 		}
@@ -609,7 +609,7 @@ client.on('group-participants-update', async (anu) => {
 					teks += `𝗧𝗼𝘁𝗮𝗹 : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
 					break
-                case 'zz':
+                case '':
                 if (!isRegistered) return reply(ind.noregis())
                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if (!isGroup) return reply(ind.groupo())
@@ -745,18 +745,20 @@ client.on('group-participants-update', async (anu) => {
 				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
 				    client.sendMessage(from, yeh, text, {quoted: mek})
 			        await limitAdd(sender)
+                                await costum(cr)
 					break
 				case 'tagall':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
+					teks += '\n𝘼𝙔𝙊 𝙏𝙊𝙋 𝙐𝙋✨\n'
 					for (let mem of groupMembers) {
-						teks += `┣➥ @${mem.jid.split('@')[0]}\n`
+						teks += `Kak @${mem.jid.split('@')[0]} belum Top Up🙃\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
+-                                       await costum(cr)
 					break
 				case 'clearall':
 					if (!isOwner) return reply(ind.ownerb())
@@ -806,11 +808,12 @@ client.on('group-participants-update', async (anu) => {
 					break
 			   	case 'setpp': 
                         if (!isGroup) return reply(ind.groupo())
-                       if (!isGroupAdmins) return reply(ind.admin())
+                        if (!isGroupAdmins) return reply(ind.admin())
                         if (!isBotGroupAdmins) return reply(ind.badmin())
-                       media = await client.downloadAndSaveMediaMessage(mek)
-                         await client.updateProfilePicture (from, media)
+                        media = await client.downloadAndSaveMediaMessage(mek)
+                        await client.updateProfilePicture (from, media)
                         reply('𝗦𝘂𝗸𝘀𝗲𝘀 𝗺𝗲𝗻𝗴𝗴𝗮𝗻𝘁𝗶 𝗶𝗰𝗼𝗻 𝗚𝗿𝘂𝗽')
+                        await costum(cr)
 					break						
 				case 'add':
 					if (!isGroup) return reply(ind.groupo())
@@ -826,25 +829,27 @@ client.on('group-participants-update', async (anu) => {
 						reply('Gagal menambahkan target, mungkin karena di private')
 					}
 					break
-					case 'grup':
-					case 'group':
+					case 'open':
+					case 'close':
 					if (!isGroup) return reply(ind.groupo())
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (args[0] === 'buka') {
-					    reply(`*BERHASIL MEMBUKA GROUP*`)
+					if (args[0] === 'order🔥') {
+					    reply(`بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ\n```OPEN NIH, GASS ORDER```\n*────────────────*\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
-					} else if (args[0] === 'tutup') {
-						reply(`*BERHASIL MENUTUP GROUP`)
+					} else if (args[0] === 'order✨') {
+						reply(`*TQ ORDERANYA HARI INI😊*`)
 						client.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
+                                        await costum(cr)
 					break      
             case 'admin':
             case 'owner':
             case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
                   client.sendMessage(from, 'Tuh nomer owner ku >_<, jangan spam atau ku block kamu',MessageType.text, { quoted: mek} )
-					break    
+                  await costum(cr)
+                  break    
            case 'setname':
                 if (!isGroup) return reply(ind.groupo())
 			    if (!isGroupAdmins) return reply(ind.admin())
@@ -896,6 +901,7 @@ client.on('group-participants-update', async (anu) => {
 						mentions(`𝗦𝗲𝗹𝗮𝗺𝗮𝘁🥳 @${mentioned[0].split('@')[0]} *anda naik menjadi admin group* (+_+)`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
+                                        await costum(cr)
 					break	
 			     	case 'kick':
 					if (!isGroup) return reply(ind.groupo())
@@ -915,6 +921,7 @@ client.on('group-participants-update', async (anu) => {
 						mentions(`𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
+                                        await costum(cr)
 					break
 				case 'listadmin':
 					if (!isGroup) return reply(ind.groupo())
@@ -941,6 +948,7 @@ client.on('group-participants-update', async (anu) => {
 						fs.unlinkSync(ran)
 					})
 					await limitAdd(sender)
+                                        await costum(cr)
 					break
                  case 'simih':
 					if (args.length < 1) return reply('Textnya mana um?')
