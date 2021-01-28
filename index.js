@@ -448,13 +448,14 @@ client.on('group-participants-update', async (anu) => {
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			
 			switch(command) {
-				case 'mutual':
+	     case 'mutual':
                 if (!isRegistered) return reply( ind.noregis())
                 if (isGroup) return  reply( 'Command ini tidak bisa digunakan di dalam grup!')
                 anug = getRegisteredRandomId(_registered).replace('@s.whatsapp.net','')
                 await reply('Looking for a partner...')
                 await reply(`wa.me/${anug}`)
                 await reply( `Partner found: 🙉\n*${prefix}next* — find a new partner`)
+		await costum(cr)
             break
             case 'next':
                 if (!isRegistered) return reply( ind.noregis())
@@ -463,6 +464,7 @@ client.on('group-participants-update', async (anu) => {
                 await reply('Looking for a partner...')
                 await reply(`wa.me/${anug}`)
                 await reply( `Partner found: 🙉\n*${prefix}next* — find a new partner`)
+		await costum(cr)		
             break
             case 'joox':
 		if (!isRegistered) return reply(ind.noregis())
@@ -475,6 +477,7 @@ client.on('group-participants-update', async (anu) => {
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.title}.mp3`, quoted: mek})
                 await limitAdd(sender)
+		await costum(cr)			
                 break
 	     case 'setppbot':
 	 	if (!isOwner) return reply(ind.ownerb())
@@ -484,6 +487,7 @@ client.on('group-participants-update', async (anu) => {
 	    	media = await client.downloadAndSaveMediaMessage(enmedia)
 	   	await client.updateProfilePicture(botNumber, media)
 	    	reply('Makasih profil barunya😗')
+		await costum(cr)			
 	   	break 
 	     case 'brainly':
 	     	if (!isRegistered) return reply(ind.noregis())
@@ -537,6 +541,7 @@ client.on('group-participants-update', async (anu) => {
 		cr = body.slice(10)
 		reply(`Reply berhasil di ubah menjadi : ${cr}`)
 		await limitAdd(sender)
+		await costum(cr)			
 	        break 
 	     case 'grouplist':
 		if (!isRegistered) return reply(ind.noregis())
@@ -739,7 +744,7 @@ client.on('group-participants-update', async (anu) => {
 				    if (isLimit(sender)) return reply(ind.limitend(pusname))
 				    if (!isBotGroupAdmins) return reply(ind.badmin())
 				    linkgc = await client.groupInviteCode (from)
-				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
+				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Group *${groupName}*`
 				    client.sendMessage(from, yeh, text, {quoted: mek})
 			        await limitAdd(sender)
                                 await costum(cr)
