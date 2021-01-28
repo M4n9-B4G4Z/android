@@ -834,7 +834,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroupAdmins) return reply(ind.admin())
 					if (!isBotGroupAdmins) return reply(ind.badmin())
 					if (args[0] === 'order🔥') {
-					    reply(`بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ\n```OPEN NIH, GASS ORDER```\n*────────────────*\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`)
+					    reply(`بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ\n```OPEN NIH, GASS ORDER```\n*────────────────*\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login)`
 						client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'order✨') {
 						reply(`*TQ ORDERANYA HARI INI😊*`)
