@@ -7,7 +7,7 @@
 ## Clone this project
 
 ```bash
-> git clone https://github.com/affisjunianto/botwasapv4
+> git clone https://github.com/M4n9-B4G4Z/botandrov2
 ```
 
 ## Install the dependencies:
