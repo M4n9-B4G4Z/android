@@ -260,13 +260,11 @@ client.on('group-participants-update', async (anu) => {
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 				teks = `Hallo Kak @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}* yang betah di sini yaa✨.\nJANGAN LUPA TOP UP🔥\n*────────────────*\n❌NO SPAM BOT❌\nKetik untuk pilih kategori :\n> *List* (List Top up All Game)\n> *Pay* (list Pembayaran)\n> *Id* (Format via ID)\n> Login (Format via Login`
-
-`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Akhirnya beban group berkurang 𝟭\nBye bye🥳 @${num.split('@')[0]} Jasamu akan di kubur dalam²`
+				teks = `Akhirnya beban group berkurang 𝟭.\nBye bye🥳 @${num.split('@')[0]}\nJasamu akan di kubur dalam²`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
