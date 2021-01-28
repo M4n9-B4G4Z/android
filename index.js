@@ -593,9 +593,10 @@ client.on('group-participants-update', async (anu) => {
              case 'help': 
 	     case 'menu':
 	 	if (!isRegistered) return reply(ind.noregis())
-		await client.sendMessage(from, help(), text
+		const reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
+		const uangku = checkATMuser(sender)
 		await costum(ind.menu(pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku), text, tescuk, cr)
-		break
+		break	     
 	     case 'donasi':
 	     case 'donate':
 		if (!isRegistered) return reply(ind.noregis())
