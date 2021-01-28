@@ -593,6 +593,7 @@ client.on('group-participants-update', async (anu) => {
 	     case 'donate':
 		if (!isRegistered) return reply(ind.noregis())
 		client.sendMessage(from, donasi(), text)
+		await costum(cr)
 		break
 	     case 'info':
 		me = client.user
