@@ -51,7 +51,7 @@ exports.ownerg = () => {
 }
 
 exports.admin = () => {
-	return`*「ADMIN GROUP ONLY」*`
+	return`*「CUMA BAGAZ YG BISA」*`
 }
 
 exports.badmin = () => {
@@ -79,7 +79,7 @@ exports.pc = () => {
 }
 
 exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
-	return`*「 DATA NEGARA 」*\n\nkamu sudah terdaftar dengan data \n\n┏━⊱nama\n┗⊱${namaUser}\n┏━⊱nomer\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱umur\n┗⊱${umurUser}\n┏━⊱waktu pendaftaran\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : jangan sampai lupa nomer ini karena ini penting:v`
+	return`*「 DATA NEGARA 」*\n\n*_Kamu sudah terdaftar dengan data_* : \n\n┏━⊱*Nama*\n┗⊱${namaUser}\n┏━⊱*Nomer*\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱umur\n┗⊱${umurUser}\n┏━⊱*Waktu Pendaftaran*\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : *_Jangan sampai lupa nomer ini karena ini penting:v_*`
 }
 
 exports.cmdnf = (prefix, command) => {
@@ -119,8 +119,8 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┏━━❉ *Abour User* ❉━━━┓
 ┣⊱ *nama* : ${pushname}
 ┣⊱ *nomer* : wa.me/${sender.split("@")[0]}
-┣⊱ *user register : ${_registered.length}
-┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 \━━━━━
+┣⊱ *user register : ${_registered.length}*
+┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 /━━━━━
 ┏━━❉ *Group* ❉━━━━┓
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
@@ -132,7 +132,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}demote*
 ┣⊱ *${prefix}promote*
 ┣⊱ *${prefix}listadmin*
-┣⊱ *${prefix}group* [buka/tutup]
+┣⊱ *${prefix}open/close* [order🔥/close✨]
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}welcome* [1/0]
 ┣━━❉ *Owner* ❉━━
@@ -144,7 +144,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}unblock*
 ┣⊱ *${prefix}leave*
 ┣⊱ *${prefix}clone*
-┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 \━━━━━
+┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 /━━━━━
 `
 }
 
@@ -153,7 +153,6 @@ exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel)
 *「 SELAMAT 」*
 ┏⊱ *Nama* : ${pushname}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
-┣⊱ *Xp* : ${getLevelingXp(sender)}
 ┣⊱ *Limit* = +3
 ┗⊱ *Level* : ${getLevel} ⊱ ${getLevelingLevel(sender)}
 `}
