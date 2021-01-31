@@ -67,7 +67,7 @@ exports.bug = () => {
 }
 
 exports.wrongf = () => {
-	return`*format salah/text kosong*`
+	return`*Format salah/text kosong*`
 }
 
 exports.clears = () => {
@@ -79,7 +79,7 @@ exports.pc = () => {
 }
 
 exports.registered = (namaUser, umurUser, serialUser, time, sender) => {
-	return`*「 DATA NEGARA 」*\n\n*_Kamu sudah terdaftar dengan data_* : \n\n┏━⊱*Nama*\n┗⊱${namaUser}\n┏━⊱*Nomer*\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱umur\n┗⊱${umurUser}\n┏━⊱*Waktu Pendaftaran*\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : *_Jangan sampai lupa nomer ini karena ini penting:v_*`
+	return`*「 DATA NEGARA 」*\n\n*_Kamu sudah terdaftar dengan data_* : \n\n┏━⊱ *Nama*\n┗⊱${namaUser}\n┏━⊱ *Nomer*\n┗⊱wa.me/${sender.split("@")[0]}\n┏━⊱ *Umur*\n┗⊱${umurUser}\n┏━⊱ *Waktu Pendaftaran*\n┗⊱${time}\n\n┏━❉ *NS* ❉━\n┣⊱${serialUser}\n┗⊱NOTE : *_Jangan sampai lupa nomer ini karena ini penting:v_*`
 }
 
 exports.cmdnf = (prefix, command) => {
@@ -117,11 +117,71 @@ exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
 exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku) => { 
 	return `
 ┏━━❉ *Abour User* ❉━━━┓
-┣⊱ *nama* : ${pushname}
-┣⊱ *nomer* : wa.me/${sender.split("@")[0]}
-┣⊱ *user register : ${_registered.length}*
+┣⊱ *Nama* : ${pushname}
+┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
+┣⊱ *Uang mu* : Rp${uangku}
+┣⊱ *XP* : ${getLevelingXp(sender)}/${reqXp}
+┣⊱ *Level* : ${getLevelingLevel(sender)}
+┣⊱ *User register* : ${_registered.length}
 ┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 /━━━━━
-┏━━❉ *Group* ❉━━━━┓
+┏━━⊱ *MAKER MENU* ⊰━━┓
+┣⊱ *${prefix}sticker*
+┣⊱ *${prefix}avengers*
+┣⊱ *${prefix}summer*
+┣⊱ *${prefix}sandwrite*
+┣⊱ *${prefix}metaldark*
+┣⊱ *${prefix}dropwater*
+┣⊱ *${prefix}greenneon*
+┣⊱ *${prefix}neontext*
+┣⊱ *${prefix}sumery*
+┣⊱ *${prefix}blood*
+┣⊱ *${prefix}firework*
+┣⊱ *${prefix}lava*
+┣⊱ *${prefix}qrcode*
+┣━━⊱  *FUN MENU*  ⊰━━━┫
+┣⊱ *${prefix}mining*
+┣⊱ *${prefix}bisakah*
+┣⊱ *${prefix}kapankah*
+┣⊱ *${prefix}apakah*
+┣⊱ *${prefix}rate*
+┣⊱ *${prefix}slap*
+┣⊱ *${prefix}tampar*
+┣⊱ *${prefix}moddroid*
+┣⊱ *${prefix}happymod*
+┣⊱ *${prefix}nangis*
+┣⊱ *${prefix}cium*
+┣⊱ *${prefix}peluk*
+┣━━⊱ *MUTUAL* ⊰━━━━━┫
+┣⊱ *${prefix}mutual*
+┣⊱ *${prefix}next*
+┣━━⊱ *MEDIA MENU* ⊰━━┫
+┣⊱ *${prefix}quotes*
+┣⊱ *${prefix}beritahoax*
+┣⊱ *${prefix}brainly*
+┣⊱ *${prefix}pinterest*
+┣⊱ *${prefix}resepmasakan*
+┣⊱ *${prefix}igstalk*
+┣⊱ *${prefix}bitly*
+┣━━⊱ *YT & SONG* ⊰━━━┫
+┣⊱ *${prefix}ytmp3*
+┣⊱ *${prefix}ytmp4*
+┣⊱ *${prefix}joox*
+┣━━⊱  *NSFW MENU*  ⊰━┫
+┣⊱ *${prefix}pokemon*
+┣⊱ *${prefix}anjing*
+┣⊱ *${prefix}blowjob*
+┣⊱ *${prefix}nekonime*
+┣⊱ *${prefix}husbu*
+┣⊱ *${prefix}ranime*
+┣━━⊱ *LIMIT & UANG* ⊰━┫
+┣⊱ *${prefix}limit*
+┣⊱ *${prefix}buylimit*
+┣⊱ *${prefix}transfer*
+┣⊱ *${prefix}dompet*
+┣━━⊱ *GROUP MENU* ⊰━┫
+┣⊱ *${prefix}hidetag*
+┣⊱ *${prefix}grouplist*
+┣⊱ *${prefix}level*
 ┣⊱ *${prefix}linkgc*
 ┣⊱ *${prefix}tagall*
 ┣⊱ *${prefix}setpp*
@@ -132,18 +192,24 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}demote*
 ┣⊱ *${prefix}promote*
 ┣⊱ *${prefix}listadmin*
-┣⊱ *${prefix}open/close* [order🔥/close✨]
+┣⊱ *${prefix}group* [buka/tutup]
+┣⊱ *${prefix}leveling* [enable/disable]
+┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}welcome* [1/0]
-┣━━❉ *Owner* ❉━━
+┣━━⊱ *OWNER MENU* ⊰━┫
 ┣⊱ *${prefix}bc*
+┣⊱ *${prefix}bcgc*
+┣⊱ *${prefix}kickall*
+┣⊱ *${prefix}setreply*
 ┣⊱ *${prefix}setprefix*
-┣⊱ *${prefix}getses*
 ┣⊱ *${prefix}clearall*
 ┣⊱ *${prefix}block*
 ┣⊱ *${prefix}unblock*
 ┣⊱ *${prefix}leave*
+┣⊱ *${prefix}event* [1/0]
 ┣⊱ *${prefix}clone*
+┣⊱ *${prefix}setppbot*
 ┗━━━━/ 𝑮4𝒛𝑩𝑶𝑻𝒔 /━━━━━
 `
 }
@@ -153,6 +219,7 @@ exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel)
 *「 SELAMAT 」*
 ┏⊱ *Nama* : ${pushname}
 ┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
+┣⊱ *Xp* : ${getLevelingXp(sender)}
 ┣⊱ *Limit* = +3
 ┗⊱ *Level* : ${getLevel} ⊱ ${getLevelingLevel(sender)}
 `}
